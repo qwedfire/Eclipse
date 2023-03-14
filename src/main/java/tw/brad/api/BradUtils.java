@@ -17,4 +17,35 @@ public class BradUtils {
 		}
 		return sb.toString();
 	}
+	public static String sayYa() {
+		return "ya";
+	}
+	public static String sayYa(String name) {
+		return String.format("Ya!%s",name);
+	}
+	public static String calc(String x,String y,String op) {
+		try {
+			int intX=Integer.parseInt(x);
+			int intY=Integer.parseInt(y);
+			int r=0,mod=0;
+			switch(op) {
+			case "1":
+				r=intX+intY;
+				return r+"";
+			case "2":
+				r=intX-intY;
+				return r+"";
+			case "3":
+				r=intX*intY;
+				return r+"";
+			case "4":
+				r=intX/intY;
+				mod=intX%intY;
+				return r+"..."+mod;
+			}
+		}catch(Exception e) {
+			return "";
+		}
+		return "";
+	}
 }
